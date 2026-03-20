@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-to-employees
+      author: Shubham
+      changes:
+        - tagDatabase:
+                  tag: version_05
+        - insert:
+            schemaName: demo
+            tableName: employees
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: 'ABC'
+              - column:
+                  name: salary
+                  value: 80000.00
+        - insert:
+            schemaName: demo
+            tableName: employees
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: name
+                  value: 'PQR'
+              - column:
+                  name: salary
+                  value: 120000.00
+        - rollback:
+            - sql:
+                sql: DELETE FROM demo.employees WHERE id IN (3, 4)
+

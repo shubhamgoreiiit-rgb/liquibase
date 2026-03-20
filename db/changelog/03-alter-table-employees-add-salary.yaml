@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      tag: version_03
+      id: alter-table-employees-add-salary-fix
+      author: Shubham
+      changes:
+        - tagDatabase:
+                  tag: version_03
+        - addColumn:
+            schemaName: demo
+            tableName: employees
+            columns:
+              - column:
+                  name: salary
+                  type: decimal(10, 2)

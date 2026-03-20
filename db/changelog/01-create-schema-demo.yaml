@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-schema-demo-fix
+      author: Shubham
+      changes:
+        - tagDatabase:
+            tag: version_01
+        - sql: CREATE SCHEMA demo

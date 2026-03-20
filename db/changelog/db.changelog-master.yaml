@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - include:
+      file: 01-create-schema-demo.yaml
+  - include:
+      file: 02-create-table-employees.yaml
+  - include:
+      file: 03-alter-table-employees-add-salary.yaml
+  - include:
+      file: 04-insert-data-to-employees.yaml
+  - include:
+      file: 05-insert-data-to-employees.yaml
+

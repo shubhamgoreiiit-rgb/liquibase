@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-data-to-employees
+      author: Shubham
+      changes:
+        - tagDatabase:
+                  tag: version_04
+        - insert:
+            schemaName: demo
+            tableName: employees
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: 'Shubham Gore'
+              - column:
+                  name: salary
+                  value: 80000.00
+        - insert:
+            schemaName: demo
+            tableName: employees
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: 'Ashok Patel'
+              - column:
+                  name: salary
+                  value: 120000.00
